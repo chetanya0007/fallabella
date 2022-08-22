@@ -14,4 +14,4 @@ RUN ls -la $APP_HOME/
 RUN pip install -r requirements.txt
 
 # Run the streamlit on container startup
-CMD [ "streamlit", "run","scarf.py","--server.port","8080"]
+CMD [ "streamlit", "run","scarf.py","--server.port","8501"]
