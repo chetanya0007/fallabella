@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imgclass
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: scarf_detection
+  template:
+    metadata:
+      labels:
+        app: scarf_detection
+    spec:
+      containers:
+      - name: cv-app
+        image: gcr.io/chetanya-project/scarf:v1
+        ports:
+        - containerPort: 8501
